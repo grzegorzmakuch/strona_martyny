@@ -39,17 +39,17 @@ include_once 'testowy.php';
                     <li>4</li>
                     <li>5</li>
                 </ul>
-                <a href="#" title="Wstecz" id="slider_prev">
+                <a href="#" title="Wstecz" id="slider_prev" class="slider-prev">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </a>
-                <a href="#" id="Dalej" "slider_next">
+                <a href="#" title="Dalej" id="slider_next" class="slider-next">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </a>
             </div>
         </section>
     </main>
     <footer>
-        <div class="footer-upper">
+        <div class="footer-upper container">
             <div class="footer-upper-social">
                 <div class="footer-upper-social-box">
                     <a href="#" title="Social 1" target="_blank">
