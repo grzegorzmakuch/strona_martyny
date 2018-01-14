@@ -32,13 +32,13 @@ include_once 'testowy.php';
     <main>
         <section class="section-toggle">
             <div id="slider" class="slider">
-                <div id="sliderWrap" class="slider-wrap">
-                    <div class="slider-item">pierwszy</div>
-                    <div class="slider-item">2</div>
-                    <div class="slider-item">3</div>
-                    <div class="slider-item">4</div>
-                    <div class="slider-item">5</div>
-                </div>
+                <ul id="sliderWrap" class="slider-wrap">
+                    <li class="slider-item">pierwszy</li>
+                    <li class="slider-item">2</li>
+                    <li class="slider-item">3</li>
+                    <li class="slider-item">4</li>
+                    <li class="slider-item">5</li>
+                </ul>
                 <a href="#" title="Wstecz" id="slider_prev" class="slider-prev">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </a>
@@ -82,7 +82,7 @@ include_once 'testowy.php';
             </div>
         </div>
     </footer>
-    <script src="js/jquery-3.2.1.min.js"></script>
+<!--    <script src="js/jquery-3.2.1.min.js"></script>-->
     <script src="js/slider.js" type="text/javascript"></script>
 </body>
 </html>
