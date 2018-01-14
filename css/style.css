@@ -23,9 +23,7 @@ header {
 }
 
 .header-image {
-    background: url('../img/logo_kolor.png');
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url('../img/logo_kolor.png') center no-repeat;
     min-height: 200px;
     margin: 0 auto;
 }
@@ -62,51 +60,57 @@ nav {
 
 /*SLIDER*/
 
-.section-slider {
-    min-height: 100%;
-    height: 100%;
+.section-toggle {
+    height: calc(100vh - 200px - 40px - 82px);
+    border: 1px solid cadetblue;
 }
 
 .slider {
     position: relative;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    /*width: 100%;*/
+    /*height: 100%;*/
     overflow: hidden;
 }
 
-.slider ul {
+.slider .slider-wrap {
     position: relative;
-    list-style: none;
-    height: 100%;
-    width: 9999%;
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slider .slider-wrap .slider-item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
+    opacity: 0;
 }
 
-.slider ul li {
-    position: relative;
-    height: 100%;
-    width: 100vw;
-    float: left;
+.slider .slider-wrap .slider-item.active {
+    opacity: 1;
 }
 
-.slider ul li:nth-child(1) {
-    background-color: aqua;
+.slider-item:nth-child(1) {
+    background: #00ffff url('http://lorempixel.com/800/450') no-repeat center center;
 }
 
-.slider ul li:nth-child(2) {
-    background-color: chartreuse;
+.slider-item:nth-child(2) {
+    background: #7fff00 url('http://lorempixel.com/800/450') no-repeat center center;
 }
 
-.slider ul li:nth-child(3) {
-    background-color: coral;
+.slider-item:nth-child(3) {
+    background: #ff7f50 url('http://lorempixel.com/800/450') no-repeat center center;
 }
 
-.slider ul li:nth-child(4) {
-    background-color: red;
+.slider-item:nth-child(4) {
+    background: #ff0000 url('http://lorempixel.com/800/450') no-repeat center center;
 }
 
-.slider ul li:nth-child(5) {
-    background-color: deeppink;
+.slider-item:nth-child(5) {
+    background: #ff1493 url('http://lorempixel.com/800/450') no-repeat center center;
 }
 
 .slider-prev,
@@ -150,6 +154,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 
 .footer-upper-social {
@@ -175,12 +180,22 @@ footer {
     color: #94618e;
 }
 
-.footer-upper-social-box a i {
-    font-size: 24px;
+.footer-upper-social-box a:hover {
+    color: #49274a;
 }
 
-.footer-upper-contact {
-    border: 1px solid greenyellow;
+.footer-upper-social-box a i {
+    font-size: 40px;
+}
+
+.footer-upper-contact-box p {
+    color: #94618e;
+    text-align: right;
+}
+
+.footer-upper-contact-box a {
+    color: #94618e;
+    text-decoration: none;
 }
 
 .footer-lower {

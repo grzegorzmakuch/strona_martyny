@@ -30,15 +30,15 @@ include_once 'testowy.php';
         <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>
     </nav>
     <main>
-        <section class="section-slider">
+        <section class="section-toggle">
             <div id="slider" class="slider">
-                <ul id="sliderWrap">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
+                <div id="sliderWrap" class="slider-wrap">
+                    <div class="slider-item">pierwszy</div>
+                    <div class="slider-item">2</div>
+                    <div class="slider-item">3</div>
+                    <div class="slider-item">4</div>
+                    <div class="slider-item">5</div>
+                </div>
                 <a href="#" title="Wstecz" id="slider_prev" class="slider-prev">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </a>
@@ -78,9 +78,11 @@ include_once 'testowy.php';
         </div>
         <div class="footer-lower">
             <div class="footer-lower-info">
-                <p>Kiedy zrobiona i przez kogo</p>
+                <p>Projekt i wykonanie MakoskyMqh 2018</p>
             </div>
         </div>
     </footer>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/slider.js" type="text/javascript"></script>
 </body>
 </html>
