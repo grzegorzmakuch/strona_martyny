@@ -12,9 +12,8 @@ body {
 }
 
 .container {
-    width: 80vw;
+    width: 75vw;
     margin: 0 auto;
-    border: 1px solid deepskyblue;
 }
 
 /*HEADER*/
@@ -63,10 +62,15 @@ nav {
 
 /*SLIDER*/
 
+.section-slider {
+    min-height: 100%;
+    height: 100%;
+}
+
 .slider {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -138,21 +142,41 @@ nav {
 footer {
     width: 100%;
     color: #94618e;
-    border: 1px solid green;
+    position: absolute;
+    bottom: 0;
 }
 
 .footer-upper {
-    border: 1px solid orange;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .footer-upper-social {
-    border: 1px solid red;
     height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer-upper-social-box {
+    margin: 0 10px;
+}
+
+.footer-upper-social-box:first-child {
+    margin-left: 0;
+}
+
+.footer-upper-social-box:last-child {
+    margin-right: 0;
+}
+
+.footer-upper-social-box a {
+    color: #94618e;
+}
+
+.footer-upper-social-box a i {
+    font-size: 24px;
 }
 
 .footer-upper-contact {
@@ -160,7 +184,6 @@ footer {
 }
 
 .footer-lower {
-    border: 1px solid cyan;
     background-color: #94618e;
     color: #f8eee7;
     min-height: 30px;

@@ -30,7 +30,7 @@ include_once 'testowy.php';
         <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>
     </nav>
     <main>
-        <section>
+        <section class="section-slider">
             <div id="slider" class="slider">
                 <ul id="sliderWrap">
                     <li>1</li>
