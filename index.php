@@ -32,19 +32,54 @@ include_once 'testowy.php';
     <main>
         <section class="section-toggle">
             <div id="slider" class="slider">
-                <ul id="sliderWrap" class="slider-wrap">
-                    <li class="slider-item">pierwszy</li>
-                    <li class="slider-item">2</li>
-                    <li class="slider-item">3</li>
-                    <li class="slider-item">4</li>
-                    <li class="slider-item">5</li>
-                </ul>
-                <a href="#" title="Wstecz" id="slider_prev" class="slider-prev">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                </a>
-                <a href="#" title="Dalej" id="slider_next" class="slider-next">
-                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                </a>
+                <div id="sliderWrap" class="slider-wrap">
+                    <div class="slider-item">
+                        <div class="slider-item-contener">
+                            <div class="slider-item-content">
+                                <h2>Slajd pierwszy, nagłówek N2</h2>
+                                <p>Akapit pierwszego slajdu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="slider-item-contener">
+                            <div class="slider-item-content">
+                                <h2>Slajd drugi, nagłówek N2</h2>
+                                <p>Akapit drugiego slajdu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="slider-item-contener">
+                            <div class="slider-item-content">
+                                <h2>Slajd trzeci, nagłówek N2</h2>
+                                <p>Akapit trzeciego slajdu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="slider-item-contener">
+                            <div class="slider-item-content">
+                                <h2>Slajd czwarty, nagłówek N2</h2>
+                                <p>Akapit czwartego slajdu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="slider-item-contener">
+                            <div class="slider-item-content">
+                                <h2>Slajd piąty, nagłówek N2</h2>
+                                <p>Akapit piątego slajdu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                <a href="#" title="Wstecz" id="slider_prev" class="slider-prev">-->
+<!--                    <i class="fa fa-chevron-left" aria-hidden="true"></i>-->
+<!--                </a>-->
+<!--                <a href="#" title="Dalej" id="slider_next" class="slider-next">-->
+<!--                    <i class="fa fa-chevron-right" aria-hidden="true"></i>-->
+<!--                </a>-->
             </div>
         </section>
     </main>

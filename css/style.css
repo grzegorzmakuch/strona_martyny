@@ -62,64 +62,79 @@ nav {
 
 .section-toggle {
     height: calc(100vh - 200px - 40px - 82px);
-    border: 1px solid cadetblue;
 }
 
 .slider {
-    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 300px;
-    overflow: hidden;
+    height: 100%;
 }
 
 .slider .slider-wrap {
-    position: relative;
-    list-style: none;
     height: 100%;
-    width: 9999%;
-    margin: 0;
-    padding: 0;
-    left: 0;
+    width: 100%;
 }
 
 .slider .slider-wrap .slider-item {
-    position: relative;
     height: 100%;
     width: 100%;
-    float: left;
+    display: none;
+}
+
+.slider .slider-wrap .slider-item .slider-item-contener {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 100%;
+}
+
+.slider .slider-wrap .slider-item .slider-item-contener .slider-item-content {
+    width: 600px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 30px 50px;
+    text-align: right;
+    line-height: 2em;
+    margin-right: 100px;
+}
+
+.slider .slider-wrap .slider-item .slider-item-contener .slider-item-content h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.slider .slider-wrap .slider-item .slider-item-contener .slider-item-content p {
+    font-size: 24px;
 }
 
 .slider-item:nth-child(1) {
-    background: #00ffff url('http://lorempixel.com/800/450') no-repeat center center;
+    background-color: #00ffff;
 }
 
 .slider-item:nth-child(2) {
-    background: #7fff00 url('http://lorempixel.com/800/450') no-repeat center center;
+    background-color: #7fff00;
 }
 
 .slider-item:nth-child(3) {
-    background: #ff7f50 url('http://lorempixel.com/800/450') no-repeat center center;
+    background-color: #ff7f50;
 }
 
 .slider-item:nth-child(4) {
-    background: #ff0000 url('http://lorempixel.com/800/450') no-repeat center center;
+    background-color: #ff0000;
 }
 
 .slider-item:nth-child(5) {
-    background: #ff1493 url('http://lorempixel.com/800/450') no-repeat center center;
+    background-color: #ff1493;
 }
 
 .slider-prev,
 .slider-next {
     width: 50px;
-    line-height: 50px;
     border-radius: 50%;
     font-size: 28px;
     color: #f8eee7;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     text-align: center;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
