@@ -74,12 +74,6 @@ include_once 'testowy.php';
                         </div>
                     </div>
                 </div>
-<!--                <a href="#" title="Wstecz" id="slider_prev" class="slider-prev">-->
-<!--                    <i class="fa fa-chevron-left" aria-hidden="true"></i>-->
-<!--                </a>-->
-<!--                <a href="#" title="Dalej" id="slider_next" class="slider-next">-->
-<!--                    <i class="fa fa-chevron-right" aria-hidden="true"></i>-->
-<!--                </a>-->
             </div>
         </section>
     </main>

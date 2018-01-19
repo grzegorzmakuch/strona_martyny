@@ -1,0 +1,76 @@
+/*KONTAKT*/
+
+.contact {
+    height: 100%;
+    padding: 30px;
+    color: #49274a;
+}
+
+.contact h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    /*margin-bottom: 30px;*/
+    color: #94618e;
+}
+
+.contact h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #94618e;
+}
+
+.contact p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #f8eee7;
+    letter-spacing: 1px;
+}
+
+.contact-szeroki {
+    background: url('../img/contact_bg.jpg') no-repeat center/cover;
+    height: 100%;
+}
+
+.contact-left {
+    width: 35%;
+    background-color: rgba(78, 32, 75, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-right {
+    width: 65%;
+    background-color: rgba(250, 238, 230, 0.8);
+}
+
+.formularz {
+    width: 500px;
+    height: 100%;
+}
+
+.formularz form {
+    margin-top: 50px;
+}
+
+.formularz input[type="text"],
+.formularz input[type="email"],
+.formularz textarea {
+    outline: none;
+    display: block;
+    width: 75%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #94618e;
+    margin-bottom: 10px;
+    background: transparent;
+}
+
+.formularz input[type="text"]:hover,
+.formularz input[type="email"]:hover {
+    border-bottom: 2px solid #49274a;
+    cursor: pointer;
+}

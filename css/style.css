@@ -160,30 +160,6 @@ nav {
     text-shadow: none;
 }
 
-/*KONTAKT*/
-
-.contact {
-    height: 100%;
-    padding: 30px 10px;
-}
-
-.contact h2 {
-    font-size: 26px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-.contact-left {
-    border: 1px solid red;
-    width: 35%;
-    background-color: #49274a;
-    color: #f8eee7;
-}
-
-.contact-right {
-    border: 1px solid blue;
-    width: 65%;
-}
 
 /*FOOTER*/
 
