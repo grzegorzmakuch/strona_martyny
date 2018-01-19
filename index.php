@@ -24,8 +24,8 @@ include_once 'testowy.php';
         <div class="header-image"></div>
     </header>
     <nav>
-        <div class="nav-menu-item"><a href="#" title="Item 1">Item 1</a></div>
-        <div class="nav-menu-item"><a href="#" title="Item 2">Item 2</a></div>
+        <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
+        <div class="nav-menu-item"><a href="kontakt.html" title="Napisz do mnie">Kontakt</a></div>
         <div class="nav-menu-item"><a href="#" title="Item 3">Item 3</a></div>
         <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>
     </nav>

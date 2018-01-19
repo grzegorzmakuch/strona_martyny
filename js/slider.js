@@ -13,3 +13,5 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 1000);
 }
+
+// event zdjąc z buttona w html i wsadzić w eventListenera w jsie

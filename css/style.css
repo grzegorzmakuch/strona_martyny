@@ -11,9 +11,20 @@ body {
     background-color: #f8eee7;
 }
 
+.section-toggle {
+    height: calc(100vh - 200px - 40px - 82px);
+    /*border: 1px solid green;*/
+}
+
 .container {
     width: 75vw;
+    height: 100%;
     margin: 0 auto;
+}
+
+.flexownia {
+    display: flex;
+    align-items: center;
 }
 
 /*HEADER*/
@@ -59,10 +70,6 @@ nav {
 }
 
 /*SLIDER*/
-
-.section-toggle {
-    height: calc(100vh - 200px - 40px - 82px);
-}
 
 .slider {
     display: flex;
@@ -151,6 +158,31 @@ nav {
 .slider-next:hover {
     color: #f8eee7;
     text-shadow: none;
+}
+
+/*KONTAKT*/
+
+.contact {
+    height: 100%;
+    padding: 30px 10px;
+}
+
+.contact h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.contact-left {
+    border: 1px solid red;
+    width: 35%;
+    background-color: #49274a;
+    color: #f8eee7;
+}
+
+.contact-right {
+    border: 1px solid blue;
+    width: 65%;
 }
 
 /*FOOTER*/
