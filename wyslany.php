@@ -18,7 +18,7 @@ include_once 'testowy.php';
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/kontakt.css">
+<!--    <link rel="stylesheet" href="css/wyslany.css">-->
 </head>
 <body>
 <header>
@@ -32,14 +32,13 @@ include_once 'testowy.php';
 </nav>
 <main>
     <section class="section-toggle">
-        <?php
-        print("wprowadzono dane:<br>");
-        print("imie: ".$_POST['firstName']."<br>");
-        print("imie: ".$_POST['email']."<br>");
-        print("imie: ".$_POST['city']."<br>");
-        print("imie: ".$_POST['phone']."<br>");
-        print("imie: ".$_POST['msg']."<br>");
-        ?>
+        <div class="container wyslany">
+            <h3>Dzięki ... Twoje zapytnie zostało wysłane</h3>
+            <p>Skontaktuję się z Tobą wkrótce</p>
+            <div class="guzik-powrot">
+                <a href="index.php">Powrót do głównej</a>
+            </div>
+        </div>
     </section>
 </main>
 <footer>

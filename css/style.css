@@ -135,32 +135,6 @@ nav {
     background-color: #ff1493;
 }
 
-.slider-prev,
-.slider-next {
-    width: 50px;
-    border-radius: 50%;
-    font-size: 28px;
-    color: #f8eee7;
-    position: absolute;
-    text-align: center;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-}
-
-.slider-prev {
-    left: 16px;
-}
-
-.slider-next {
-    right: 16px;
-}
-
-.slider-prev:hover,
-.slider-next:hover {
-    color: #f8eee7;
-    text-shadow: none;
-}
-
-
 /*FOOTER*/
 
 footer {
@@ -232,4 +206,184 @@ footer {
 
 .footer-lower-info p {
     font-weight: 300;
+}
+
+/*KONTAKT*/
+
+.contact {
+    height: 100%;
+    padding: 30px;
+    color: #49274a;
+}
+
+.contact h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #94618e;
+}
+
+.contact h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #94618e;
+}
+
+.contact p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #f8eee7;
+    letter-spacing: 1px;
+}
+
+.contact-szeroki {
+    background: url('../img/contact_bg.jpg') no-repeat center/cover;
+    height: 100%;
+}
+
+.contact-left {
+    width: 35%;
+    background-color: rgba(78, 32, 75, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-right {
+    width: 65%;
+    background-color: rgba(250, 238, 230, 0.8);
+}
+
+.formularz {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formularz-columns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.formularz-left-column {
+    width: 50%;
+    margin-right: 4px;
+}
+
+.formularz-right-column {
+    width: 50%;
+    margin-left: 4px;
+}
+
+.formularz input[type="text"],
+.formularz input[type="email"],
+.formularz textarea {
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    border: none;
+    margin-bottom: 8px;
+    background-color: #f8eee7;
+}
+
+.formularz textarea {
+    min-height: 200px;
+    margin-bottom: 0;
+    resize: none;
+}
+
+.formularz input[type="text"]:last-of-type {
+    margin-bottom: 0;
+}
+
+.formularz input[type="text"]:hover,
+.formularz input[type="email"]:hover {
+    border-left: 10px solid #94618e;
+}
+
+.formularz-bottom-column {
+    width: 100%;
+    text-align: center;
+}
+
+.guzik {
+    /*border-radius: 50%;*/
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: #94618e;
+    color: #f8eee7;
+    position: relative;
+    transition: all .3s;
+    margin: 0 2px;
+}
+
+.guzik:hover {
+    background-color: #49274a;
+    cursor: pointer;
+}
+
+.guzik .fa {
+    font-size: 20px;
+}
+
+.wyslij::after {
+    display: none;
+    content: "Wyślij";
+    left: 110px;
+    font-size: 18px;
+    text-transform: lowercase;
+    line-height: 20px;
+    color: #94618e;
+    position: absolute;
+}
+
+.kasuj::before {
+    display: none;
+    content: "Kasuj";
+    right: 110px;
+    font-size: 18px;
+    text-transform: lowercase;
+    line-height: 20px;
+    color: #94618e;
+    position: absolute;
+}
+
+.kasuj:hover::before,
+.wyslij:hover::after {
+    display: inline-block;
+}
+
+/*WYSLANY*/
+
+.wyslany {
+    border: 1px solid green;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.wyslany h3 {
+    color: #49274a;
+    font-size: 36px;
+}
+
+.guzik-powrot a {
+    width: 300px;
+    height: 50px;
+    /*padding: 30px 60px;*/
+    background-color: #94618e;
+    color: #f8eee7;
+    /*border-bottom: 2px solid #49274a;*/
+    display: block;
+    border: 1px solid red;
+    text-decoration: none;
 }

@@ -82,7 +82,7 @@
 }
 
 .formularz textarea {
-    height: 200px;
+    min-height: 200px;
     margin-bottom: 0;
     resize: none;
 }
