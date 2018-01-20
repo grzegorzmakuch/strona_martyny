@@ -26,7 +26,7 @@ include_once 'testowy.php';
     <nav>
         <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
         <div class="nav-menu-item"><a href="kontakt.html" title="Napisz do mnie">Kontakt</a></div>
-        <div class="nav-menu-item"><a href="galeria.html" title="Galeria">Galeria</a></div>
+        <div class="nav-menu-item"><a href="galeria.php" title="Galeria">Galeria</a></div>
         <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>
     </nav>
     <main>

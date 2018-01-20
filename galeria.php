@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gmaku
- * Date: 13.01.2018
- * Time: 12:27
- */
-include_once 'testowy.php';
+    include_once 'zaladujGalerie.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +12,7 @@ include_once 'testowy.php';
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/wyslany.css">
+    <link rel="stylesheet" href="css/galeria.css">
 </head>
 <body>
 <header>
@@ -32,12 +26,8 @@ include_once 'testowy.php';
 </nav>
 <main>
     <section class="section-toggle">
-        <div class="container flexownia-pion wyslany">
-            <h3>Dzięki <?php print($_POST['firstName']); ?>, Twoje zapytnie zostało wysłane</h3>
-            <p>Skontaktuję się z Tobą wkrótce</p>
-            <div class="guzik-powrot">
-                <a href="index.php">Powrót do głównej</a>
-            </div>
+        <div class="container galeria">
+            <?php $zaladuj();?>
         </div>
     </section>
 </main>
@@ -75,6 +65,5 @@ include_once 'testowy.php';
         </div>
     </div>
 </footer>
-<script src="js/checkForm.js"></script>
 </body>
 </html>
