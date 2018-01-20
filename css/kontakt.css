@@ -9,7 +9,6 @@
 .contact h2 {
     font-size: 26px;
     text-transform: uppercase;
-    /*margin-bottom: 30px;*/
     color: #94618e;
 }
 
@@ -47,12 +46,26 @@
 }
 
 .formularz {
-    width: 500px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.formularz form {
-    margin-top: 50px;
+.formularz-columns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.formularz-left-column {
+    width: 50%;
+    margin-right: 4px;
+}
+
+.formularz-right-column {
+    width: 50%;
+    margin-left: 4px;
 }
 
 .formularz input[type="text"],
@@ -60,17 +73,78 @@
 .formularz textarea {
     outline: none;
     display: block;
-    width: 75%;
-    padding: 10px;
+    width: 100%;
+    padding: 14px;
     font-size: 14px;
     border: none;
-    border-bottom: 2px solid #94618e;
-    margin-bottom: 10px;
-    background: transparent;
+    margin-bottom: 8px;
+    background-color: #f8eee7;
+}
+
+.formularz textarea {
+    height: 200px;
+    margin-bottom: 0;
+    resize: none;
+}
+
+.formularz input[type="text"]:last-of-type {
+    margin-bottom: 0;
 }
 
 .formularz input[type="text"]:hover,
 .formularz input[type="email"]:hover {
-    border-bottom: 2px solid #49274a;
+    border-left: 10px solid #94618e;
+}
+
+.formularz-bottom-column {
+    width: 100%;
+    text-align: center;
+}
+
+.guzik {
+    /*border-radius: 50%;*/
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: #94618e;
+    color: #f8eee7;
+    position: relative;
+    transition: all .3s;
+    margin: 0 2px;
+}
+
+.guzik:hover {
+    background-color: #49274a;
     cursor: pointer;
+}
+
+.guzik .fa {
+    font-size: 20px;
+}
+
+.wyslij::after {
+    display: none;
+    content: "Wyślij";
+    left: 110px;
+    font-size: 18px;
+    text-transform: lowercase;
+    line-height: 20px;
+    color: #94618e;
+    position: absolute;
+}
+
+.kasuj::before {
+    display: none;
+    content: "Kasuj";
+    right: 110px;
+    font-size: 18px;
+    text-transform: lowercase;
+    line-height: 20px;
+    color: #94618e;
+    position: absolute;
+}
+
+.kasuj:hover::before,
+.wyslij:hover::after {
+    display: inline-block;
 }
