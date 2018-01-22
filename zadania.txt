@@ -1,0 +1,11 @@
+RZECZY DO ZROBIENIA NA STRONIE:
+
+1. Do slajdera na głównej zaimplementować płynne przejścia slajdów, ustawić zjęcia w tle, wstawić napisy w kafelkach;
+2. Przerobić strukturę tak, żeby ładowanie nagłówka i stopki następowało przez require header.php i footer.php;
+3. Strona galerii jest wyborem między grafikami a malarstwem
+4. Galeria zdjęć ładowana jest dynamicznie na podstawie zawartości bazy danych ze zdjęciami;
+5. Na wszystkich stronach oprócz index.php nagłówek jest zmniejszony;
+6. Napisać dla formularza reguły sprawdzające poprawność numeru (tylko liczby) i emaila (musi być małpa);
+7. Po wysłaniu formularza dostajemy emaila z potwierdzeniem zapytania, takie samo potwierdzenie otrzymuje klient;
+8. Poprawić pisownię w stylach, żeby była w miarę zgodna z BEM
+9. Nazwy klas, pól itd. zmienić na język angielski
