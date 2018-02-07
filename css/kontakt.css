@@ -126,8 +126,8 @@
     display: none;
     content: "Wyślij";
     left: 110px;
-    font-size: 18px;
-    text-transform: lowercase;
+    font-size: 14px;
+    text-transform: uppercase;
     line-height: 20px;
     color: #94618e;
     position: absolute;
@@ -137,8 +137,8 @@
     display: none;
     content: "Kasuj";
     right: 110px;
-    font-size: 18px;
-    text-transform: lowercase;
+    font-size: 14px;
+    text-transform: uppercase;
     line-height: 20px;
     color: #94618e;
     position: absolute;

@@ -1,0 +1,19 @@
+1. na stronie galerii tworze polaczenie do bazy:
+    $conn = mysql_connect("localhost", "root", "1234");
+    i wybieram odpowiednia baze:
+    mysql_select_db("nazwa_bazy_danych");
+2. w phpmyadmin tworze baze danych o nazwie "nazwa_bazy_danych" z tabela "obrazy"
+    - tabela "obrazy" posiada  pola id, path
+    - id - int, primary, auto increment
+    - path - nazwa / sciezka do pliku
+3. tworze zmienna z zapytaniem do bazy:
+    $res = mysql_query("SELECT * FROM obrazy);
+4. sczytuje  rekordy:
+    while($row = mysql_fetch_array($res)) {
+        ?> --> tu zamykam php i wstrzykuje html:
+        <img src = "<?php echo "./images/".$row["path"];?>" - zmieszany html z wstrzyknietym wynikiem z bazy
+    <?php
+    }   
+    ?>
+5. $res1 = 
+6. $count = mysql_num_rows($res1)
