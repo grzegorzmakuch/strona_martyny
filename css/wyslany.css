@@ -1,3 +1,11 @@
+.section-toggle {
+    height: calc(100vh - 40px - 102px);
+} 
+
+header {
+    display: none;
+}
+
 .wyslany {
     text-align: center;
 }

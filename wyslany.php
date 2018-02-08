@@ -1,13 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: gmaku
- * Date: 13.01.2018
- * Time: 12:27
- */
-include_once 'testowy.php';
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,55 +16,55 @@ include_once 'testowy.php';
         </header>
         <nav>
             <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
-            <div class="nav-menu-item"><a href="kontakt.html" title="Napisz do mnie">Kontakt</a></div>
-            <div class="nav-menu-item"><a href="gallery-select.html" title="Galeria">Galeria</a></div>
+            <div class="nav-menu-item"><a href="gallery-select.php" title="Galeria">Galeria</a></div>
+            <div class="nav-menu-item"><a href="contact.php" title="Napisz do mnie">Kontakt</a></div>
             <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>
         </nav>
-        <main>
-            <section class="section-toggle">
-                <div class="container flexownia-pion wyslany">
-                    <h3>Dzięki <?php print($_POST['firstName']); ?>, Twoje zapytnie zostało wysłane</h3>
-                    <p>Skontaktuję się z Tobą wkrótce</p>
-                    <div class="guzik-powrot">
-                        <a href="index.php">Powrót do głównej</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-upper container">
-                <div class="footer-upper-social">
-                    <div class="footer-upper-social-box">
-                        <a href="#" title="Social 1" target="_blank">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="footer-upper-social-box">
-                        <a href="#" title="Social 2" target="_blank">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="footer-upper-social-box">
-                        <a href="#" title="Social 3" target="_blank">
-                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-upper-contact">
-                    <div class="footer-upper-contact-box">
-                        <p>
-                            <a href="mailto:adres@email.com">email: adres@email.com</a>
-                        </p>
-                        <p>+48 111 222 333</p>
-                    </div>
-                </div>
+<main>
+    <section class="section-toggle">
+        <div class="container flexownia-pion wyslany">
+            <h3>Dzięki <?php print($_POST['firstName']); ?>, Twoje zapytnie zostało wysłane</h3>
+            <p>Skontaktuję się z Tobą wkrótce</p>
+            <div class="guzik-powrot">
+                <a href="index.php">Powrót do głównej</a>
             </div>
-            <div class="footer-lower">
-                <div class="footer-lower-info">
-                    <p>Projekt i wykonanie MakoskyMqh 2018</p>
-                </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-upper container">
+        <div class="footer-upper-social">
+            <div class="footer-upper-social-box">
+                <a href="#" title="Social 1" target="_blank">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
             </div>
-        </footer>
-        <script src="js/checkForm.js"></script>
-    </body>
+            <div class="footer-upper-social-box">
+                <a href="#" title="Social 2" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="footer-upper-social-box">
+                <a href="#" title="Social 3" target="_blank">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-upper-contact">
+            <div class="footer-upper-contact-box">
+                <p>
+                    <a href="mailto:adres@email.com">email: adres@email.com</a>
+                </p>
+                <p>+48 111 222 333</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-lower">
+        <div class="footer-lower-info">
+            <p>Projekt i wykonanie MakoskyMqh 2018</p>
+        </div>
+    </div>
+</footer>
+<script src="js/checkForm.js"></script>
+</body>
 </html>

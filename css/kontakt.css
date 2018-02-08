@@ -1,4 +1,10 @@
-/*KONTAKT*/
+.section-toggle {
+    height: calc(100vh - 40px - 102px);
+} 
+
+header {
+    display: none;
+}
 
 .contact {
     height: 100%;

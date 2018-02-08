@@ -22,40 +22,13 @@
         </nav>
         <main>
             <section class="section-toggle">
-                <div class="container galeria">
-                    <?php
-                    $db = mysqli_connect('localhost', 'root', '');
-                    mysqli_select_db($db, 'baza_obrazy');
-                    $page = 0;
-                    if (isset($_POST["page"])) {
-                        $page = $_POST["page"];
-                        $page = ($page * 6) - 6;
-                    }
-                    $sql = "SELECT * FROM obrazy ORDER BY id LIMIT $page, 6";
-                    $res = mysqli_query($db, $sql);
-                    while ($row = mysqli_fetch_array($res)) {
-                        ?>
-                        <div class="kwadrat">
-                            <img src="images-thumbs/<?php echo $row["path"]; ?>">
-                        </div>
-                        <?php
-                    }
-                    $res1 = mysqli_query($db, "SELECT * FROM obrazy");
-                    $count = mysqli_num_rows($res1); // zlicza ile jest zdjec w bazie
-                    $pageNum = ceil($count / 6); // ilosc podstron ze zdjeciami
-                    echo "<br><br>";
-                    ?>
-                </div>
-                <div class="dots">
-                    <form method="POST">
-                        <?php
-                        for ($i = 1; $i <= $pageNum; $i++) {
-                            ?>
-                            <input type="submit" value="<?php echo $i; ?>" name="page">
-                            <?php
-                        }
-                        ?>
-                    </form>
+                <div class="container gallery-select-wrapper">
+                    <div class="gallery-select left-select">
+                        <a href="galeria.php">Malarstwo</a>
+                    </div>
+                    <div class="gallery-select right-select">
+                        <a href="galeria.php">Grafika</a>
+                    </div>
                 </div>
             </section>
         </main>
