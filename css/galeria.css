@@ -8,7 +8,7 @@
 .kwadrat {
     width: 15vw;
     height: auto;
-    margin: 10px 20px;
+    margin: 10px;
     border: 1px solid green;
     text-align: center;
 }
@@ -27,10 +27,20 @@ header {
 
 .dots {
     min-height: 20px;
+    line-height: 20px;
     margin: 0 auto;
     width: 25%;
-    border: 1px solid orange;
     text-align: center;
+}
+.dots .dots-counter {
+    color: #49274a;
+    border: none;
+    background-color: transparent;
+}
+
+.dots .dots-counter:hover {
+    color: #94618e;
+    cursor: pointer;
 }
 
 .gallery-select-wrapper {
