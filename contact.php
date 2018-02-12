@@ -18,7 +18,7 @@
             <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
             <div class="nav-menu-item"><a href="gallery-select.php" title="Galeria">Galeria</a></div>
             <div class="nav-menu-item"><a href="contact.php" title="Napisz do mnie">Kontakt</a></div>
-            <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>
+            <!--<div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>-->
         </nav>
         <main>
             <section class="section-toggle">
@@ -36,15 +36,15 @@
                             <p>Sosnowiec, Polska</p>
                         </div>
                     </div>
-                    <div class="contact contact-right">
+                    <div class="contact contact-right"> 
                         <div class="formularz">
                             <h2>Wyślij mi wiadomość:</h2>
                             <form action="wyslany.php" method="post">
                                 <div class="formularz-columns">
                                     <div class="formularz-left-column">
-                                        <input type="text" name="firstName" placeholder="Imię">
+                                        <input type="text" name="firstName" placeholder="Imię" required>
                                         <!--todo: napisac funkcje sprawdzajaca format email-->
-                                        <input type="email" name="email" placeholder="E-mail">
+                                        <input type="email" name="email" placeholder="E-mail" required>
                                         <input type="text" name="city" placeholder="Miasto">
                                         <!--todo: napisac funkcje sprawdzajaca format nr telefonu-->
                                         <input type="text" name="phone" placeholder="Telefon">
@@ -53,14 +53,14 @@
                                     </div>
                                     <div class="formularz-right-column">
                                         <!--todo: napisac funkcje sprawdzajaca ilosc znakow-->
-                                        <textarea name="msg" placeholder="Wpisz wiadomość (max. 160 znaków)"></textarea>
+                                        <textarea maxlength="160" name="msg" placeholder="Wpisz wiadomość (max. 160 znaków)"></textarea>
                                     </div>
                                 </div>
                                 <div class="formularz-bottom-column">
                                     <button class="guzik kasuj" type="reset" >
                                         <i class="fa fa-times" aria-hidden="true"></i>
                                     </button>
-                                    <button class="guzik wyslij" type="submit" >
+                                    <button class="guzik wyslij" type="sub  mit" >
                                         <i class="fa fa-paper-plane" aria-hidden="true"></i>
                                     </button>
                                 </div>
@@ -104,6 +104,6 @@
                 </div>
             </div>
         </footer>
-        <script src="js/checkForm.js"></script>
+        <!--<script src="js/checkForm.js"></script>-->
     </body>
 </html>

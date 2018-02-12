@@ -1,3 +1,7 @@
+<?php
+require_once('connect.php');
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,21 +22,19 @@
             <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
             <div class="nav-menu-item"><a href="gallery-select.php" title="Galeria">Galeria</a></div>
             <div class="nav-menu-item"><a href="contact.php" title="Napisz do mnie">Kontakt</a></div>
-            <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>
+            <!--            <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>-->
         </nav>
         <main>
             <section class="section-toggle">
                 <div class="container galeria">
                     <?php
-                    $db = mysqli_connect('localhost', 'root', '1234');
-                    mysqli_select_db($db, 'baza_obrazy');
                     $page = 0;
                     if (isset($_POST["page"])) {
                         $page = $_POST["page"];
                         $page = ($page * 8) - 8;
                     }
                     $sql = "SELECT * FROM obrazy ORDER BY id LIMIT $page, 8";
-                    $res = mysqli_query($db, $sql);
+                    $res = mysqli_query($connection, $sql);
                     while ($row = mysqli_fetch_array($res)) {
                         ?>
                         <div class="kwadrat">
@@ -40,7 +42,7 @@
                         </div>
                         <?php
                     }
-                    $res1 = mysqli_query($db, "SELECT * FROM obrazy");
+                    $res1 = mysqli_query($connection, "SELECT * FROM obrazy");
                     $count = mysqli_num_rows($res1); // zlicza ile jest zdjec w bazie
                     $pageNum = ceil($count / 8); // ilosc podstron ze zdjeciami
                     echo "<br><br>";

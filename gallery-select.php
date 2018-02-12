@@ -18,16 +18,16 @@
             <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
             <div class="nav-menu-item"><a href="gallery-select.php" title="Galeria">Galeria</a></div>
             <div class="nav-menu-item"><a href="contact.php" title="Napisz do mnie">Kontakt</a></div>
-            <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>
+            <!--<div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>-->
         </nav>
         <main>
             <section class="section-toggle">
                 <div class="container gallery-select-wrapper">
                     <div class="gallery-select left-select">
-                        <a href="galeria.php">Malarstwo</a>
+                        <a href="gallery-paintings.php">Malarstwo</a>
                     </div>
                     <div class="gallery-select right-select">
-                        <a href="galeria.php">Grafika</a>
+                        <a href="gallery-paintings.php">Grafika</a>
                     </div>
                 </div>
             </section>

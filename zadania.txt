@@ -1,37 +1,27 @@
 RZECZY DO ZROBIENIA NA STRONIE:
 
-1. Do slajdera na głównej zaimplementować płynne przejścia slajdów, ustawić zjęcia w tle, wstawić napisy w kafelkach;
-2. Przerobić strukturę tak, żeby ładowanie nagłówka i stopki następowało przez require header.php i footer.php;
-4. Galeria zdjęć ładowana jest dynamicznie na podstawie zawartości bazy danych ze zdjęciami;
-6. Napisać dla formularza reguły sprawdzające poprawność numeru (tylko liczby) i emaila (musi być małpa);
-7. Po wysłaniu formularza dostajemy emaila z potwierdzeniem zapytania, takie samo potwierdzenie otrzymuje klient;
-8. Poprawić pisownię w stylach, żeby była w miarę zgodna z BEM
-9. Nazwy klas, pól itd. zmienić na język angielski
-10. Zoptymalizować grafiki (nie wiem jescze jak ale trzeba to zrobić)
+Ogólne:
+- Przerobić strukturę tak, żeby ładowanie nagłówka i stopki następowało przez require header.php i footer.php;
+- Poprawić pisownię w stylach, żeby była w miarę zgodna z BEM;
+- Nazwy klas, pól itd. zmienić na język angielski;
+- Zoptymalizować grafiki (nie wiem jescze jak ale trzeba to zrobić);
+
+Strona główna:
+- Do slajdera na głównej zaimplementować płynne przejścia slajdów, ustawić zjęcia w tle, wstawić napisy w kafelkach;
+
+Galeria:
+- Zrobić efekt hover dla miniatur, ma się pojawiać albo 'szczegóły' albo otwieranie galerii;
+- Napisać mechanike galerii .js (pewnie lightbox, ale to jeszcze doszukam);
+- Dorobić kolejną podstronę dla galerii z grafikami, do tego osobne zapytania i osbna tabela na bazie;
+- Ewentualnie spróbować można w zależności od wybranej galerii na jednym szablonie ladować zawartość bazy;
+
+Kontakt:
+- Napisać dla formularza reguły sprawdzające poprawność numeru (tylko liczby) i emaila (musi być małpa);
+- Validatory niech będą i javascript i php;
+- Po wysłaniu formularza dostajemy emaila z potwierdzeniem zapytania, takie samo potwierdzenie otrzymuje klient, wykorzystac PHP Mailer;
 
 ZROBIONE: 
 
-3. Strona galerii jest wyborem między grafikami a malarstwem
-5. Na wszystkich stronach oprócz index.php nagłówek jest zmniejszony;
-
-NOTATKI DO GALERII:
-
-1. na stronie galerii tworze polaczenie do bazy:
-    $conn = mysql_connect("localhost", "root", "1234");
-    i wybieram odpowiednia baze:
-    mysql_select_db("nazwa_bazy_danych");
-2. w phpmyadmin tworze baze danych o nazwie "nazwa_bazy_danych" z tabela "obrazy"
-    - tabela "obrazy" posiada  pola id, path
-    - id - int, primary, auto increment
-    - path - nazwa / sciezka do pliku
-3. tworze zmienna z zapytaniem do bazy:
-    $res = mysql_query("SELECT * FROM obrazy);
-4. sczytuje  rekordy:
-    while($row = mysql_fetch_array($res)) {
-        ?> --> tu zamykam php i wstrzykuje html:
-        <img src = "<?php echo "./images/".$row["path"];?>" - zmieszany html z wstrzyknietym wynikiem z bazy
-    <?php
-    }   
-    ?>
-5. $res1 = 
-6. $count = mysql_num_rows($res1)
+- Strona galerii jest wyborem między grafikami a malarstwem;
+- Galeria zdjęć ładowana jest dynamicznie na podstawie zawartości bazy danych ze zdjęciami;
+- Na wszystkich stronach oprócz index.php nagłówek jest zmniejszony;
