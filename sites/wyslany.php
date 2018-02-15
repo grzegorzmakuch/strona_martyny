@@ -1,15 +1,20 @@
 <?php
-require('connect.php');
+require('../sites/connect.php');
 
 if (isset($_POST) & !empty($_POST)) {
-    $name = ucwords(strtolower($_POST['firstName']), " ");
-    $email = $_POST['email'];
-    $city = ucwords(strtolower($_POST['city']), " ");
-    $phone = $_POST['phone'];
-    $message = $_POST['msg'];
+//    $name = ucwords(strtolower($_POST['firstName']), " ");
+    $name = ucwords(strtolower(filter_input(INPUT_POST, 'firstName')), " ");
+//    $email = $_POST['email'];
+    $email = filter_input(INPUT_POST, 'email');
+//    $city = ucwords(strtolower($_POST['city']), " ");
+    $city = ucwords(strtolower(filter_input(INPUT_POST, 'city')), " ");
+//    $phone = $_POST['phone'];
+    $phone = filter_input(INPUT_POST, 'phone');
+//    $message = $_POST['msg'];
+    $message = filter_input(INPUT_POST, 'msg');
 
     $query = "INSERT INTO `klienci_zapytania` (imie, email, miasto, telefon, zapytanie) VALUES ('$name', '$email', '$city', '$phone', '$message')";
-    mysqli_query($connection, $query);
+    $result = mysqli_query($connection, $query);
 }
 ?>
 
@@ -20,19 +25,19 @@ if (isset($_POST) & !empty($_POST)) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Strona - wersja 1.0</title>
 
-        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/wyslany.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/wyslany.css">
     </head>
     <body>
         <header>
             <div class="header-image"></div>
         </header>
         <nav>
-            <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
-            <div class="nav-menu-item"><a href="gallery-select.php" title="Galeria">Galeria</a></div>
-            <div class="nav-menu-item"><a href="contact.php" title="Napisz do mnie">Kontakt</a></div>
+            <div class="nav-menu-item"><a href="../index.php" title="Strona główna">Główna</a></div>
+            <div class="nav-menu-item"><a href="../sites/gallery-select.php" title="Galeria">Galeria</a></div>
+            <div class="nav-menu-item"><a href="../sites/contact.php" title="Napisz do mnie">Kontakt</a></div>
             <!--<div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>-->
         </nav>
         <main>
@@ -41,7 +46,7 @@ if (isset($_POST) & !empty($_POST)) {
                     <h3>Dzięki <?php echo $name; ?>, Twoje zapytnie zostało wysłane</h3>
                     <p>Skontaktuję się z Tobą wkrótce</p>
                     <div class="guzik-powrot">
-                        <a href="index.php">Powrót do głównej</a>
+                        <a href="../index.php">Powrót do głównej</a>
                     </div>
                 </div>
             </section>

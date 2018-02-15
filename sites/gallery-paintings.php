@@ -1,5 +1,5 @@
 <?php
-require_once('connect.php');
+require_once('../sites/connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,19 +9,19 @@ require_once('connect.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Strona - wersja 1.0</title>
 
-        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/galeria.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/galeria.css">
     </head>
     <body>
         <header>
             <div class="header-image"></div>
         </header>
         <nav>
-            <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
-            <div class="nav-menu-item"><a href="gallery-select.php" title="Galeria">Galeria</a></div>
-            <div class="nav-menu-item"><a href="contact.php" title="Napisz do mnie">Kontakt</a></div>
+            <div class="nav-menu-item"><a href="../index.php" title="Strona główna">Główna</a></div>
+            <div class="nav-menu-item"><a href="../sites/gallery-select.php" title="Galeria">Galeria</a></div>
+            <div class="nav-menu-item"><a href="../sites/contact.php" title="Napisz do mnie">Kontakt</a></div>
             <!--            <div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>-->
         </nav>
         <main>
@@ -37,8 +37,17 @@ require_once('connect.php');
                     $res = mysqli_query($connection, $sql);
                     while ($row = mysqli_fetch_array($res)) {
                         ?>
-                        <div class="kwadrat">
-                            <img src="images-thumbs/<?php echo $row["path"]; ?>">
+                        <div class="kwadrat-siatka">
+                            <div class="kwadrat-nakladka"></div>
+                            <img src="../images-thumbs/<?php echo $row["path"]; ?>">
+                            <div class="kwadrat-nakladka-guziki">
+                                <div class="kwadrat-nakladka-guziki-wiecej">
+                                    <a href="#">Zobacz więcej</a>
+                                </div>
+                                <div class="kwadrat-nakladka-guziki-wiecej">
+                                    <a href="#">Ogladaj galerie</a>
+                                </div>
+                            </div>
                         </div>
                         <?php
                     }

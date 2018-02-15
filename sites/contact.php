@@ -5,19 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Strona - wersja 1.0</title>
 
-        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/kontakt.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/kontakt.css">
     </head>
     <body>
         <header>
             <div class="header-image"></div>
         </header>
         <nav>
-            <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
-            <div class="nav-menu-item"><a href="gallery-select.php" title="Galeria">Galeria</a></div>
-            <div class="nav-menu-item"><a href="contact.php" title="Napisz do mnie">Kontakt</a></div>
+            <div class="nav-menu-item"><a href="../index.php" title="Strona główna">Główna</a></div>
+            <div class="nav-menu-item"><a href="../sites/gallery-select.php" title="Galeria">Galeria</a></div>
+            <div class="nav-menu-item"><a href="../sites/contact.php" title="Napisz do mnie">Kontakt</a></div>
             <!--<div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>-->
         </nav>
         <main>
@@ -39,7 +39,7 @@
                     <div class="contact contact-right"> 
                         <div class="formularz">
                             <h2>Wyślij mi wiadomość:</h2>
-                            <form action="wyslany.php" method="post">
+                            <form action="../sites/wyslany.php" method="post">
                                 <div class="formularz-columns">
                                     <div class="formularz-left-column">
                                         <input type="text" name="firstName" placeholder="Imię" required>

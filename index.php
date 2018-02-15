@@ -15,8 +15,8 @@
         </header>
         <nav>
             <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
-            <div class="nav-menu-item"><a href="gallery-select.php" title="Galeria">Galeria</a></div>
-            <div class="nav-menu-item"><a href="contact.php" title="Napisz do mnie">Kontakt</a></div>
+            <div class="nav-menu-item"><a href="sites/gallery-select.php" title="Galeria">Galeria</a></div>
+            <div class="nav-menu-item"><a href="sites/contact.php" title="Napisz do mnie">Kontakt</a></div>
             <!--<div class="nav-menu-item"><a href="#" title="Item 4">Logowanie/rejestracja</a></div>-->
         </nav>
         <main>

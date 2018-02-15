@@ -5,29 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Strona - wersja 1.0</title>
 
-        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/galeria.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/galeria.css">
     </head>
     <body>
         <header>
             <div class="header-image"></div>
         </header>
         <nav>
-            <div class="nav-menu-item"><a href="index.php" title="Strona główna">Główna</a></div>
-            <div class="nav-menu-item"><a href="gallery-select.php" title="Galeria">Galeria</a></div>
-            <div class="nav-menu-item"><a href="contact.php" title="Napisz do mnie">Kontakt</a></div>
+            <div class="nav-menu-item"><a href="../index.php" title="Strona główna">Główna</a></div>
+            <div class="nav-menu-item"><a href="../sites/gallery-select.php" title="Galeria">Galeria</a></div>
+            <div class="nav-menu-item"><a href="../sites/contact.php" title="Napisz do mnie">Kontakt</a></div>
             <!--<div class="nav-menu-item"><a href="#" title="Item 4">Item 4</a></div>-->
         </nav>
         <main>
             <section class="section-toggle">
                 <div class="container gallery-select-wrapper">
                     <div class="gallery-select left-select">
-                        <a href="gallery-paintings.php">Malarstwo</a>
+                        <a href="../sites/gallery-paintings.php">Malarstwo</a>
                     </div>
                     <div class="gallery-select right-select">
-                        <a href="gallery-paintings.php">Grafika</a>
+                        <a href="../sites/gallery-paintings.php">Grafika</a>
                     </div>
                 </div>
             </section>

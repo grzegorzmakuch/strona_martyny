@@ -5,23 +5,30 @@ Ogólne:
 - Poprawić pisownię w stylach, żeby była w miarę zgodna z BEM;
 - Nazwy klas, pól itd. zmienić na język angielski;
 - Zoptymalizować grafiki (nie wiem jescze jak ale trzeba to zrobić);
+- W przyszłości dodać możliwość przełączenia się na język angielski;
+- Przenieść połączenia z bazą do PDO;
+- Przygotować sesje (od Zelenta);
 
 Strona główna:
 - Do slajdera na głównej zaimplementować płynne przejścia slajdów, ustawić zjęcia w tle, wstawić napisy w kafelkach;
 
 Galeria:
-- Zrobić efekt hover dla miniatur, ma się pojawiać albo 'szczegóły' albo otwieranie galerii;
 - Napisać mechanike galerii .js (pewnie lightbox, ale to jeszcze doszukam);
 - Dorobić kolejną podstronę dla galerii z grafikami, do tego osobne zapytania i osbna tabela na bazie;
 - Ewentualnie spróbować można w zależności od wybranej galerii na jednym szablonie ladować zawartość bazy;
 
 Kontakt:
+- Poprawić metody ściągania danych z formularza (filter_input) na wszystkich polach i zmiennych;
 - Napisać dla formularza reguły sprawdzające poprawność numeru (tylko liczby) i emaila (musi być małpa);
 - Validatory niech będą i javascript i php;
 - Po wysłaniu formularza dostajemy emaila z potwierdzeniem zapytania, takie samo potwierdzenie otrzymuje klient, wykorzystac PHP Mailer;
+
+O mnie:
+- Dodać podstronę 'O mnie' z kilkoma informacjami, wystawami, galeriami itd;
 
 ZROBIONE: 
 
 - Strona galerii jest wyborem między grafikami a malarstwem;
 - Galeria zdjęć ładowana jest dynamicznie na podstawie zawartości bazy danych ze zdjęciami;
 - Na wszystkich stronach oprócz index.php nagłówek jest zmniejszony;
+- Zrobić efekt hover dla miniatur, ma się pojawiać albo 'szczegóły' albo otwieranie galerii;

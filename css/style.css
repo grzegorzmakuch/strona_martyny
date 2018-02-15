@@ -69,11 +69,12 @@ nav {
     text-transform: uppercase;
     color: #49274a;
     font-size: 14px;
+    transition: color .2s;
 }
 
 .nav-menu-item a:hover {
     color: #f8eee7;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 /*SLIDER*/
