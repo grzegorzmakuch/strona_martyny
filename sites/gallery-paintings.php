@@ -33,9 +33,8 @@ require_once('../sites/connect.php');
                         $page = $_POST["page"];
                         $page = ($page * 8) - 8;
                     }
-                    $sql = "SELECT * FROM obrazy ORDER BY id LIMIT $page, 8";
-                    $res = mysqli_query($connection, $sql);
-                    while ($row = mysqli_fetch_array($res)) {
+                    $sql = $db->query("SELECT * FROM obrazy ORDER BY id LIMIT $page, 8");
+                    foreach ($conn->query($sql) as $row) {
                         ?>
                         <div class="kwadrat-siatka">
                             <div class="kwadrat-nakladka"></div>
@@ -51,8 +50,8 @@ require_once('../sites/connect.php');
                         </div>
                         <?php
                     }
-                    $res1 = mysqli_query($connection, "SELECT * FROM obrazy");
-                    $count = mysqli_num_rows($res1); // zlicza ile jest zdjec w bazie
+                    $sqlCount = $db->query("SELECT * FROM obrazy");
+                    $count = $sqlCount->rowCount(); // ilosc wierszy w bazie
                     $pageNum = ceil($count / 8); // ilosc podstron ze zdjeciami
                     echo "<br><br>";
                     ?>

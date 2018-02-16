@@ -6,7 +6,6 @@ Ogólne:
 - Nazwy klas, pól itd. zmienić na język angielski;
 - Zoptymalizować grafiki (nie wiem jescze jak ale trzeba to zrobić);
 - W przyszłości dodać możliwość przełączenia się na język angielski;
-- Przenieść połączenia z bazą do PDO;
 - Przygotować sesje (od Zelenta);
 
 Strona główna:
@@ -32,3 +31,4 @@ ZROBIONE:
 - Galeria zdjęć ładowana jest dynamicznie na podstawie zawartości bazy danych ze zdjęciami;
 - Na wszystkich stronach oprócz index.php nagłówek jest zmniejszony;
 - Zrobić efekt hover dla miniatur, ma się pojawiać albo 'szczegóły' albo otwieranie galerii;
+- Przenieść połączenia z bazą do PDO;

@@ -1,11 +1,14 @@
 <?php
-    $connection = new mysqli("localhost", "root", "1234", "baza_obrazy");
-    if(!$connection) {
-        echo "Błąd logowania do bazy" . die(mysqli_error($connection));
-    }
-    
-//    $dbselect = mysqli_select_db($connection, "baza_obrazy");
-//    if(!$dbselect) {
-//        echo "Błąd połączenia z bazą" . die(mysqli_error($connection));
-//    }
-?>
+$config = require_once 'config.php';
+
+try {
+    $db = new PDO('mysql:host='.$config['host'].';dbname='.$config['database'].';charset=utf8', 
+            $config['user'], 
+            $config['password'], 
+            [
+                PDO::ATTR_EMULATE_PREPARES => false, 
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            ]);
+} catch (PDOException $ex) {
+    exit ('Database error');
+}

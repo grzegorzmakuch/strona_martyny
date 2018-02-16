@@ -1,20 +1,26 @@
 <?php
-require('../sites/connect.php');
+session_start();
+require_once '../sites/connect.php';
 
 if (isset($_POST) & !empty($_POST)) {
-//    $name = ucwords(strtolower($_POST['firstName']), " ");
-    $name = ucwords(strtolower(filter_input(INPUT_POST, 'firstName')), " ");
-//    $email = $_POST['email'];
-    $email = filter_input(INPUT_POST, 'email');
-//    $city = ucwords(strtolower($_POST['city']), " ");
+//    $name = ucwords(strtolower(filter_input(INPUT_POST, 'firstName')), " ");
+    $name = filter_input(INPUT_POST, 'firstName');
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    if(empty($email)) {
+        $_SESSION['given_email'] = $_POST['email'];
+        header('Location: ../sites/connect.php');
+    }
     $city = ucwords(strtolower(filter_input(INPUT_POST, 'city')), " ");
-//    $phone = $_POST['phone'];
     $phone = filter_input(INPUT_POST, 'phone');
-//    $message = $_POST['msg'];
     $message = filter_input(INPUT_POST, 'msg');
 
-    $query = "INSERT INTO `klienci_zapytania` (imie, email, miasto, telefon, zapytanie) VALUES ('$name', '$email', '$city', '$phone', '$message')";
-    $result = mysqli_query($connection, $query);
+    $query = $db->prepare("INSERT INTO `klienci_zapytania` (imie, email, miasto, telefon, zapytanie) VALUES (:name, :email, :city, :phone, :message)");
+    $query->bindValue(':name', $name, PDO::PARAM_STR);
+    $query->bindValue(':email', $email, PDO::PARAM_STR);
+    $query->bindValue(':city', $city, PDO::PARAM_STR);
+    $query->bindValue(':phone', $phone, PDO::PARAM_STR);
+    $query->bindValue(':message', $message, PDO::PARAM_STR);
+    $query->execute();
 }
 ?>
 
