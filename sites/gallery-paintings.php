@@ -33,12 +33,13 @@ require_once('../sites/connect.php');
                         $page = $_POST["page"];
                         $page = ($page * 8) - 8;
                     }
-                    $sql = $db->query("SELECT * FROM obrazy ORDER BY id LIMIT $page, 8");
-                    foreach ($conn->query($sql) as $row) {
+                    $sql = "SELECT * FROM obrazy ORDER BY id LIMIT $page, 8";
+                    $result = $db->query($sql);
+                    foreach ($result->fetchAll() as $value) {
                         ?>
                         <div class="kwadrat-siatka">
                             <div class="kwadrat-nakladka"></div>
-                            <img src="../images-thumbs/<?php echo $row["path"]; ?>">
+                            <img src="../images-thumbs/<?php echo $value["path"]; ?>">
                             <div class="kwadrat-nakladka-guziki">
                                 <div class="kwadrat-nakladka-guziki-wiecej">
                                     <a href="#">Zobacz więcej</a>
@@ -50,8 +51,7 @@ require_once('../sites/connect.php');
                         </div>
                         <?php
                     }
-                    $sqlCount = $db->query("SELECT * FROM obrazy");
-                    $count = $sqlCount->rowCount(); // ilosc wierszy w bazie
+                    $count = $db->query('SELECT COUNT(id) as cnt FROM obrazy')->fetch()['cnt'];
                     $pageNum = ceil($count / 8); // ilosc podstron ze zdjeciami
                     echo "<br><br>";
                     ?>

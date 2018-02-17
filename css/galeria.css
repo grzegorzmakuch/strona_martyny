@@ -58,8 +58,8 @@ header {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transform: scale(.6);
-    transition: opacity, transform .4s;
+    transform: scale(.25);
+    transition: opacity, transform .3s;
 }
 
 .kwadrat-nakladka-guziki-wiecej {
