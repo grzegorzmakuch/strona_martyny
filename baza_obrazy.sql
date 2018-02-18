@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 12 Lut 2018, 14:57
--- Wersja serwera: 5.7.19-log
--- Wersja PHP: 7.1.9
+-- Czas generowania: 18 Lut 2018, 13:26
+-- Wersja serwera: 10.1.26-MariaDB
+-- Wersja PHP: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,15 +34,9 @@ CREATE TABLE `klienci_zapytania` (
   `email` varchar(255) NOT NULL,
   `miasto` varchar(255) NOT NULL,
   `telefon` int(11) NOT NULL,
-  `zapytanie` varchar(255) NOT NULL
+  `zapytanie` varchar(255) NOT NULL,
+  `dodano` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Zrzut danych tabeli `klienci_zapytania`
---
-
-INSERT INTO `klienci_zapytania` (`id`, `imie`, `email`, `miasto`, `telefon`, `zapytanie`) VALUES
-(16, 'Wielkie Imie', 'mail@mail.pl', 'Wielkie Miasto', 123123123, 'Tresc wiadomosci');
 
 -- --------------------------------------------------------
 
@@ -76,7 +70,7 @@ INSERT INTO `obrazy` (`id`, `path`) VALUES
 (14, 'zzz');
 
 --
--- Indeksy dla zrzutĂłw tabel
+-- Indeksy dla zrzutów tabel
 --
 
 --
@@ -100,14 +94,12 @@ ALTER TABLE `obrazy`
 -- AUTO_INCREMENT dla tabeli `klienci_zapytania`
 --
 ALTER TABLE `klienci_zapytania`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT dla tabeli `obrazy`
 --
 ALTER TABLE `obrazy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

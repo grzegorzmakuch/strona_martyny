@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -44,7 +48,9 @@
                                     <div class="formularz-left-column">
                                         <input type="text" name="firstName" placeholder="Imię" required>
                                         <!--todo: napisac funkcje sprawdzajaca format email-->
-                                        <input type="email" name="email" placeholder="E-mail" required>
+                                        <input type="email" name="email" placeholder="E-mail" required 
+                                        <?= isset($_SESSION['given_email'])? 'value="' . $_SESSION['given_email'] . '"' : ''
+                                        ?>>
                                         <input type="text" name="city" placeholder="Miasto">
                                         <!--todo: napisac funkcje sprawdzajaca format nr telefonu-->
                                         <input type="text" name="phone" placeholder="Telefon">
@@ -64,6 +70,12 @@
                                         <i class="fa fa-paper-plane" aria-hidden="true"></i>
                                     </button>
                                 </div>
+                                <?php
+                                if (isset($_SESSION['given_email'])) {
+                                    echo "<p class='alert'>Niepoprawny adres</p>";
+                                    unset($_SESSION['given_email']);
+                                }
+                                ?>
                             </form>
                         </div>
                     </div>

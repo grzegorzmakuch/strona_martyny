@@ -1,14 +1,12 @@
 <?php
 session_start();
 require_once '../sites/connect.php';
-
 if (isset($_POST) & !empty($_POST)) {
     $name = ucwords((strtolower(filter_input(INPUT_POST, 'firstName'))), " ");
-//    $name = ucwords((strtolower($nameToPut)), " ");
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     if(empty($email)) {
         $_SESSION['given_email'] = $_POST['email'];
-        header('Location: ../sites/connect.php');
+        header('Location: ../sites/contact.php');
     }
     $city = ucwords(strtolower(filter_input(INPUT_POST, 'city')), " ");
     $phone = filter_input(INPUT_POST, 'phone');
