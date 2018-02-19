@@ -2,23 +2,24 @@
 session_start();
 require_once '../sites/connect.php';
 if (isset($_POST) & !empty($_POST)) {
-    $name = ucwords((strtolower(filter_input(INPUT_POST, 'firstName'))), " ");
+    $name = filter_input(INPUT_POST, 'firstName');
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-    if(empty($email)) {
-        $_SESSION['given_email'] = $_POST['email'];
-        header('Location: ../sites/contact.php');
-    }
-    $city = ucwords(strtolower(filter_input(INPUT_POST, 'city')), " ");
+    $city = filter_input(INPUT_POST, 'city');
     $phone = filter_input(INPUT_POST, 'phone');
     $message = filter_input(INPUT_POST, 'msg');
 
-    $query = $db->prepare("INSERT INTO `klienci_zapytania` (imie, email, miasto, telefon, zapytanie) VALUES (:name, :email, :city, :phone, :message)");
-    $query->bindValue(':name', $name, PDO::PARAM_STR);
-    $query->bindValue(':email', $email, PDO::PARAM_STR);
-    $query->bindValue(':city', $city, PDO::PARAM_STR);
-    $query->bindValue(':phone', $phone, PDO::PARAM_STR);
-    $query->bindValue(':message', $message, PDO::PARAM_STR);
-    $query->execute();
+    if (empty($email)) {
+        $_SESSION['given_email'] = $_POST['email'];
+        header('Location: ../sites/contact.php');
+    } else {
+        $query = $db->prepare("INSERT INTO `klienci_zapytania` (imie, email, miasto, telefon, zapytanie) VALUES (:name, :email, :city, :phone, :message)");
+        $query->bindValue(':name', $name, PDO::PARAM_STR);
+        $query->bindValue(':email', $email, PDO::PARAM_STR);
+        $query->bindValue(':city', $city, PDO::PARAM_STR);
+        $query->bindValue(':phone', $phone, PDO::PARAM_INT);
+        $query->bindValue(':message', $message, PDO::PARAM_STR);
+        $query->execute();
+    }
 }
 ?>
 
